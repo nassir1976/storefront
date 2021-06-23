@@ -18,7 +18,7 @@ const Categories = (props) => {
 
   return (
     < div >
-      <h2>Browse our Products by Category</h2>
+      <h2 className ="head">Browse our Products by Category</h2>
 
       {
         props.categories.map((category, idx) => {

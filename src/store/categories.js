@@ -4,14 +4,16 @@ let categoryList = [
   {
     name: 'electronics',
     displayName: 'ELECTRONICS',
-    description: 'The Meeting Owl Pro is our premium 360-degree camera, mic, and speaker combined into one easy-to-use device.',
+    description: 'Category Description Goes Here',
     active: false,
+    // url:'https://source.unsplash.com/random?products'
   },
   {
     name: 'food',
     displayName: 'FOOD',
     description: ' Delicious Ethiopian food',
     active: false,
+    // url:'https://source.unsplash.com/random?products'
   },
   // {
   //   name: 'cloth',
