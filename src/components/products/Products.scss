@@ -1,5 +1,5 @@
 .products{
-  height: 70vh;
+  height: 50vh;
   display: flex;
   justify-content:center ;
   flex-wrap: wrap;
@@ -14,20 +14,23 @@
     margin-top: .5em;
     margin-bottom: 0em;
     
+    
 
   }
   .description{
-    color: grey;
+    color: red;
     font-size: 1.5rem;
     margin-top: 0em;
   }
 }
   .MuiCardContent-root{
-    h5{
-      font-size: 20px;
-    }
+    // h5{
+    //   font-size: .5px;
+     
+    // }
     h2{
       font-size: 20px;
+      color: royalblue;
     }
   }
   .MuiCard-root {
