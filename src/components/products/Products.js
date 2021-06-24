@@ -12,39 +12,25 @@ import Typography from '@material-ui/core/Typography';
 
 
 
-
-
-
-
-
-
-
-
-
 import './Products.scss';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 150,
   },
-  
+
   media: {
     height: 150,
+  },
+  keyboard: {
+    backgroundColor: "pink",
   }
-  // keyboard:{
-  //   backgroundColor:"pink",
-  // }
 
 
 })
 
 function Products(props) {
-  const classes = useStyles
-  // cast the vote in the store...
-  // dispatch the category action
-  // props.vote(person);
-
-
+  const classes = useStyles();
 
   return (
     < div className="products">
@@ -54,28 +40,24 @@ function Products(props) {
       {props.products.map((product, i) => {
         return (
           <Card key={i} className={classes.root}>
-            <CardActionArea>
+            <CardActionArea className={classes.keyboard}>
               <CardMedia
-                 className={classes.media}
-                 image={product.url}
-                 title={product.name}
-                // className={classes.media}
-                // image='https://source.unsplash.com/random?product'
-                // // {`https://source.unsplash.com/random?${props.category.description}`}
-                // title="products"
+                className={classes.media}
+                image={`https://source.unsplash.com/random?${product.name}`}
+              // title ='Product picture'
+
               />
-              
+
               <CardContent className="content">
+
                 <Typography gutterBottom variant="h5" component="h2">
                   product name:{product.name}
                 </Typography>
-                <Typography gutterBottom variant="h5" component="h2">
-                  product name:{product.url}
-                </Typography>
+
                 <Typography gutterBottom variant="h5" component="h2">
                   price:{product.price}
                 </Typography>
-  
+
                 <Typography gutterBottom variant="h5" component="h2">
                   description:{product.description}
                 </Typography>
@@ -86,9 +68,9 @@ function Products(props) {
             </CardActionArea>
             <CardActions>
               <Button size="small" color="primary">
-
                 VIEW DETAILS
               </Button>
+
             </CardActions>
           </Card>
         )
@@ -109,8 +91,5 @@ const mapDispatchToProps = {
   changeproduct,
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Products);
-
-
-
 
 
