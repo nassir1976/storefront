@@ -6,21 +6,16 @@ let categoryList = [
     displayName: 'ELECTRONICS',
     description: 'Category Description Goes Here',
     active: false,
-    // url:'https://source.unsplash.com/random?products'
+   
   },
   {
     name: 'food',
     displayName: 'FOOD',
-    description: ' Delicious Ethiopian food',
+    description: ' Delicious Food Description Goes Here ',
     active: false,
-    // url:'https://source.unsplash.com/random?products'
+    
   },
-  // {
-  //   name: 'cloth',
-  //   displayName: 'CLOTH',
-  //   description: 'NICE',
-  //   active: false,
-  // }
+  
 ]
 /// initial state 
 let initialState = {

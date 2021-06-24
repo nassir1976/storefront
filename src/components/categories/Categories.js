@@ -23,7 +23,7 @@ const Categories = (props) => {
       {
         props.categories.map((category, idx) => {
           return (
-            <Button style={{fontFamily:"cursive", color: 'green'}} key={idx} onClick={() => { props.changecategory(category.name); props.changeproduct(category.name); }} title={category.name}>{category.displayName}</Button>
+            <Button style={{ margin :'0 6px 0 0',fontFamily:"cursive",  color: 'green'}} variant="contained" color="primary" key={idx} onClick={() => { props.changecategory(category.name); props.changeproduct(category.name); }} title={category.name}>{category.displayName}</Button>
             
           )
         })}
