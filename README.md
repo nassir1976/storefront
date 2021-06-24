@@ -1,7 +1,7 @@
 # Virtual Store
 ## LAB - Application State with Redux
 
-[PR](https://github.com/nassir1976/storefront/pull/1)
+[PR](https://github.com/nassir1976/storefront/pull/3)
 
 ### Phase 1 Requirements
 
