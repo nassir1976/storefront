@@ -10,20 +10,32 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import {addToCart} from '../../store/cart.js'
+
+
 
 
 import './Products.scss';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 150,
+    // maxWidth: 150,
+    width:325,
+    maxHeight:525
   },
 
   media: {
     height: 150,
   },
-  keyboard: {
-    backgroundColor: "pink",
+  buttonContainer: {
+   display:'flex',
+   justifyContent:'space-evenly',
+   paddingLeft:20,
+   paddingRight:20,
+  backgroundColor:'pink',
+  // width:85,
+  // color:'yelow'
+
   }
 
 
@@ -66,8 +78,11 @@ function Products(props) {
                 </Typography>
               </CardContent>
             </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
+            <CardActions className={classes.buttonContainer}>
+              <Button className="addButton" onClick={() => props.addToCart(product)} size="small" color ="primary">
+                ADD TO CART
+              </Button>
+              <Button size="small" color ="primary">
                 VIEW DETAILS
               </Button>
 
@@ -89,6 +104,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
 
   changeproduct,
+  addToCart,
+ 
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Products);
 
