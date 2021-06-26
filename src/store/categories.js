@@ -40,7 +40,7 @@ export default function CategoriesReducer(state=initialState, action){
     default: return state;
   }
 }
- // Action Creatord
+ // Action Creator
 
 export function changecategory(name){
   return{
