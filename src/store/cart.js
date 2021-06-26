@@ -12,36 +12,31 @@ let newCart;
 
 // REducer function //
 export default function CartReducer(state = initialState, action) {
+  
   // add to cart//
 
   let { type, payload } = action;
   switch (type) {
     case "ADD_TO_CART":
-      state.count++;
-      payload.count++;
-
-      if (!state.cart.includes(payload)) {
+    if (!state.cart.includes(payload)) {
         newCart = [...state.cart, payload]
       } else {
         newCart = [...state.cart]
       }
-      return { cart: newCart, count: state.count };
+      return { cart: newCart, count:state.count +1  };
 
     /// remove from cart///
     case "REMOVE_FROM_CART":
-      state.count--;
-      let temp = [...state.cart]
-      let deleteOneItem = true;
-      let updatedCart = temp.filter((item) => {
-        if (item === payload && deleteOneItem) {
-          deleteOneItem = false;
-          return false;
+    
+    let updatedCart = state.cart.filter((item) => {
+    if (item.name === payload.name ) {
+     return false;
         } else {
           return true
         }
       })
 
-      return { ...state, cart: [...updatedCart] }
+      return { ...state, count:state.count -1, cart: [...updatedCart] }
     default: return state;
   }
 }

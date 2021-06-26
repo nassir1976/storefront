@@ -34,6 +34,8 @@
 
 ### Lab:  37  Redux - Combined Reducers
 
+[pull-Request](https://github.com/nassir1976/storefront/pull/4)
+
 - Virtual Store Phase 2: Continue work on the e-Commerce storefront, breaking up the store into multiple reducers and sharing functionality/data between components
 
 

@@ -36,6 +36,7 @@ const mapStateToProps =(state)=>{
     categories:state.categories.categories
   }
 }
+//action
 const mapDispatchToProps={
   changecategory,
   changeproduct,
