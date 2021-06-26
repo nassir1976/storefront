@@ -1,9 +1,10 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers,applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import CartReducer from "./cart.js";
 import categoriesReducer from "./categories.js";
 import productsReducer from "./product";
-
+import thunk from './middleware/thunk.js';
+import loggerMiddleware from './middleware/logger.js';
 
 
 // combine reducer .... products & categories  are 
@@ -15,7 +16,7 @@ const reducers = combineReducers({
 })
 
 const store =()=>{
-  return createStore(reducers,composeWithDevTools());
+  return createStore(reducers,composeWithDevTools(applyMiddleware(loggerMiddleware, thunk)));
 }
 
 export default store;
