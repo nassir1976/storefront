@@ -5,10 +5,12 @@ import categoriesReducer from "./categories.js";
 import productsReducer from "./product";
 
 
+
 // combine reducer .... products & categories  are 
 const reducers = combineReducers({
-  products:productsReducer,
   categories:categoriesReducer,
+  products:productsReducer,
+  // categories:categoriesReducer,
   cart:CartReducer
 })
 
