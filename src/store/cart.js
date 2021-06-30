@@ -1,3 +1,5 @@
+// import axios from "axios";
+
 
 
 //  initial state 
@@ -43,12 +45,22 @@ export default function CartReducer(state = initialState, action) {
 // Action Creatord
 
 export function addToCart(name) {
+  if(name.inStock > 0){
+        name.inStock --; 
+        
+      }
   return {
+    
     type: "ADD_TO_CART",
     payload: name,
+    
 
   }
 }
+// if(name.inStock > 0){
+//     name.inStock --; 
+//   }
+
 
 
 //action create 

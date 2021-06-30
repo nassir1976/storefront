@@ -60,3 +60,19 @@
 - Sees a list of all products in the cart
 - Clicks the delete button on an item and sees the item removed
 - Changes the quantity selector on an item and sees the cart total change
+
+
+### Lab:  38 Redux - Asynchronous Actions
+
+### Phase 3: Connect the Virtual Store to an API to retrieve live data from your data source, using thunk to enable asynchronous actions
+
+### Phase 3 Requirements
+- In phase 3, we will be connecting our Virtual Store to a live API so that our data is persistent and able to be separately managed.
+
+    - As a user, I want to interact with live inventory so that I have confidence that the displayed products are in stock
+    - As a user, I want to know to that when I add an item to my cart, that it is removed from inventory so that no other users can purchase it
+
+
+### Notes on State Management
+ - You will need to use **useEffect()** to dispatch a load action on the initial page load
+ - This will need to use **thunk** as it will be asynchronous
