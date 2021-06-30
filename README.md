@@ -64,6 +64,8 @@
 
 ### Lab:  38 Redux - Asynchronous Actions
 
+[PR](https://github.com/nassir1976/storefront/pull/7)
+
 ### Phase 3: Connect the Virtual Store to an API to retrieve live data from your data source, using thunk to enable asynchronous actions
 
 ### Phase 3 Requirements
