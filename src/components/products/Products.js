@@ -1,6 +1,7 @@
+import {useEffect} from 'react';
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeproduct } from '../../store/product.js';
+import { changeproduct, getFromApi } from '../../store/product.js';
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -9,6 +10,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+
 
 import {addToCart} from '../../store/cart.js'
 
@@ -40,9 +42,18 @@ const useStyles = makeStyles({
 
 
 })
+// const dispatch = useDispatch();
+
+
+ 
 
 function Products(props) {
-  const classes = useStyles();
+const classes = useStyles();
+// const dispatch = useDispatch();
+useEffect(() => {
+  props.getFromApi();
+},[]);
+
 
   return (
     < div className="products">
@@ -71,10 +82,10 @@ function Products(props) {
                 </Typography>
 
                 <Typography gutterBottom variant="h5" component="h2">
-                  description:{product.description}
+                  description:{product.description} description here
                 </Typography>
                 <Typography gutterBottom variant="h5" component="h2">
-                  IN STOCK:{product.inventory}
+                  IN STOCK:{product.inStock}
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -105,6 +116,7 @@ const mapDispatchToProps = {
 
   changeproduct,
   addToCart,
+  getFromApi
  
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Products);
