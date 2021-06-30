@@ -54,8 +54,7 @@ useEffect(() => {
   props.getFromApi();
 },[]);
 
-
-  return (
+return (
     < div className="products">
       <h2>{props.category.displayName}</h2>
       <h2 className="description">{props.category.description}</h2>

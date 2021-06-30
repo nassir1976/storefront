@@ -119,8 +119,7 @@ export default function ProductsReducer(state = initialState, action) {
         products: newProducts,
         productList: state.productList
       };
-    // default: return state;
-
+  
     // case "ADD_TO_CART":
     //   let newList = state.products;
     //   newProducts = newList.filter(product => product.inStack !== 0);
@@ -128,6 +127,7 @@ export default function ProductsReducer(state = initialState, action) {
     //   products: newProducts, 
     //   productList: state.productList
     //  };
+    
     default: return state;
   };
 }
@@ -140,6 +140,7 @@ export const getFromApi = () => async (dispatch, getState) => {
     payload: data
   })
 }
+
 
 
 // export const getFromApi = () => async(dispatch) => {
